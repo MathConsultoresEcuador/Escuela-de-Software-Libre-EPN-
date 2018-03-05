@@ -1,7 +1,8 @@
 # Escuela-de-Software-Libre-EPN-
-##Herramientas Fundamentales para todo Data Scientist 
 
-###(Etapa I : R project, Etapa II: Python)
+## Herramientas Fundamentales para todo Data Scientist 
+
+### (Etapa I : R project, Etapa II: Python)
 
 Con el objetivo de responder a las necesidades y realidad de nuestro país se realiza la primera edición de la “Escuela de Software Libre” – Herramientas para todo Data Scientist en la Escuela Politécnica Nacional. El interés principal es brindar a la comunidad (estudiantes y profesionales) las técnicas y herramientas para desarrollar uno de los perfiles más solicitados en la actualidad, Data Scientist, de esta manera contribuir al desarrollo en diversos sectores del país.
 

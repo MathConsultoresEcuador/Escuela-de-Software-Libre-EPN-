@@ -12,6 +12,4 @@ Se inicia desde la instalación y configuración del software, el debate de los 
 
 ## Contenidos
 
-![alt text](https://github.com/MathConsultoresEcuador/Escuela-de-Software-Libre-EPN-/blob/master/Contenidos.png?raw=true "Tabla de Contenidos" width=500px)
-
-<img src="https://github.com/MathConsultoresEcuador/Escuela-de-Software-Libre-EPN-/blob/master/Contenidos.png?raw=true" width="200">
+<img src="https://github.com/MathConsultoresEcuador/Escuela-de-Software-Libre-EPN-/blob/master/Contenidos.png?raw=true" width="600">

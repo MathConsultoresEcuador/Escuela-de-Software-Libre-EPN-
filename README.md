@@ -11,3 +11,5 @@ El programa de la “Escuela de Software Libre” abarca contenido necesario par
 Se inicia desde la instalación y configuración del software, el debate de los conceptos del lenguaje de programación genéricos, se revisan aspectos teórico-prácticos de la estadística, bases de datos, escritura de funciones, agregación de bases de datos, y herramientas gráficas. Incorpora la  manipulación, tratamiento y visualización de datos, reportería dinámica, aplicaciones Web, R-Studio Server, e integración con bases de datos Apache Spark.
 
 ## Contenidos
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")

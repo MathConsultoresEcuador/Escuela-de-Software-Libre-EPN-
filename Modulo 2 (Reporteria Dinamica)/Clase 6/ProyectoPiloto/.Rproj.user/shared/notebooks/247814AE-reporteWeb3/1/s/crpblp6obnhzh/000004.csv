@@ -1,0 +1,10 @@
+"0","print(xtable(anova(modelo1)),type=""html"")
+"
+"1","<!-- html table generated in R 3.4.4 by xtable 1.8-2 package -->
+<!-- Sat Apr 14 12:31:00 2018 -->
+<table border=1>
+<tr> <th>  </th> <th> Df </th> <th> Sum Sq </th> <th> Mean Sq </th> <th> F value </th> <th> Pr(&gt;F) </th>  </tr>
+  <tr> <td> dist </td> <td align=""right""> 1 </td> <td align=""right""> 1672210.59 </td> <td align=""right""> 1672210.59 </td> <td align=""right""> 185.16 </td> <td align=""right""> 0.0000 </td> </tr>
+  <tr> <td> Residuals </td> <td align=""right""> 48 </td> <td align=""right""> 433495.40 </td> <td align=""right""> 9031.15 </td> <td align=""right"">  </td> <td align=""right"">  </td> </tr>
+   </table>
+"

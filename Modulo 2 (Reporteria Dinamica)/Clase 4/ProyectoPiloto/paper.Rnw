@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+
+
+<<directorio, echo=F>>=
+#opts_knit$set(root.dir = 'ChunksTmp')
+opts_chunk$set(eval = F,fig.align = "center")
+@
+
+
+\section{Librerías Aplicativo}
+A continuación enlistamos las librerías usadas en el aplicativo del modelo predictivo de reprobación de estudiantes:
+
+\begin{itemize}
+\item shiny
+\item DT
+\item highcharter
+\item plotly
+\item sparklyr
+\item tidyr
+\item dplyr
+\item DBI
+
+
+\end{itemize}
+
+<<info, results='asis',eval=TRUE,size='nomalsize'>>=
+toLatex(sessionInfo())
+@
+
+
+\end{document}

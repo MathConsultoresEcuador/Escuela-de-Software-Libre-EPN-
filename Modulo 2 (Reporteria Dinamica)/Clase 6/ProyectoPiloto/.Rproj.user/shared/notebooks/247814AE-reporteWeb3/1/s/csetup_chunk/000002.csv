@@ -1,0 +1,5 @@
+"0","# “default”, “cerulean”, “journal”, “flatly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, “yeti”"
+"0","library(knitr)"
+"0","library(DT)"
+"0","load(""Analisis/Modelos.RData"")"
+"0","knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)"

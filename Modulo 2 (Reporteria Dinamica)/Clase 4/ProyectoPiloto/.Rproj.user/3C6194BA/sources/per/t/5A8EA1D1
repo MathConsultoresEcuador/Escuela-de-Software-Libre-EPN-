@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523207744263.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "7|1|13|0|\n15|1|21|0|\n71|27|85|0|\n",
+    "hash" : "4100730456",
+    "id" : "5A8EA1D1",
+    "lastKnownWriteTime" : 1523210271,
+    "last_content_update" : 1523210271206,
+    "path" : "~/Escritorio/Modulo 2/Clase 4/ProyectoPiloto/Analisis/Datos/LimpiezaDatos.R",
+    "project_path" : "Analisis/Datos/LimpiezaDatos.R",
+    "properties" : {
+        "cursorPosition" : "58,0",
+        "scrollLine" : "55"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

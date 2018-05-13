@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523583216500.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3254239534",
+    "id" : "E8C1A05D",
+    "lastKnownWriteTime" : 1523593407,
+    "last_content_update" : 1523593407310,
+    "path" : "~/Escritorio/Modulo 2/Clase 5/ProyectoPiloto/Analisis/Datos/Transformacion.R",
+    "project_path" : "Analisis/Datos/Transformacion.R",
+    "properties" : {
+        "cursorPosition" : "27,0",
+        "scrollLine" : "16"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

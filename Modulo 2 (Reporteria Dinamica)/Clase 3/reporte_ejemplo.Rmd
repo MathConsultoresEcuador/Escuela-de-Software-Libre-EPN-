@@ -1,0 +1,200 @@
+---
+title: "Título del Reporte"
+author: "Autor del Reporte"
+date: "2 de diciembre de 2017"
+output:
+  html_document:
+    theme: lumen
+    highlight: haddock
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+# En el preambulo se puede especificar el Tema ('theme: default'), se puede escoger alguno de los siguientes temas:
+
+#"default", "cerulean", "journal", "flatly", "readable", "spacelab", "united", "cosmo", "lumen", "paper", "sandstone", "simplex", "yeti"
+
+#Setear los parámetros de los 'chunks' 
+# echo: Si es =TRUE se muestra el código dentro del chunk
+# eval: Si es =TRUE se compila (ejecutan) las líneas de código dentreo del chunk
+# message: Si es =TRUE se muestran los mensajes que salen de la Consola ('Console')
+# warning: Si es =TRUE se muestran las advertencias que salen de la Consola 
+knitr::opts_chunk$set(echo = TRUE,message=FALSE, warning=FALSE)
+
+```
+
+### R Markdown
+
+This is  for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+
+## Ejemplo: Chunk
+
+```{r eval=FALSE}
+#echo: permite verificar si se muestra o no el código
+#eval: cuando es verdadero permite que se ejecuten las lineas de codigo.
+2+2
+x<-1:100
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+##Hola Todos
+Mi edad es `r cars[1,2]`
+
+## Graficos 'plotly'
+
+### Ejemplo 1: Gráfico de puntos
+
+```{r message=FALSE, warning=FALSE}
+library(plotly) # Cargamos la libreria
+
+
+# Ejemplo 1: Gráfico de Puntos -------------------------------
+
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+
+p <- plot_ly(
+  d, x = ~carat, y = ~price,
+  color = ~carat, size = ~carat
+)
+
+p
+```
+
+
+### Ejemplo 2: Gráfico de Lineas
+
+```{r}
+x <- c(1:100)
+random_y <- rnorm(100, mean = 0)
+data <- data.frame(x, random_y)
+
+p <- plot_ly(data, x = ~x, y = ~random_y, type = 'scatter', mode = 'lines')
+
+p
+```
+
+### Ejemplo 3: Gráfico de Área
+
+
+```{r echo=FALSE}
+density <- density(diamonds$carat)
+
+p <- plot_ly(x = ~density$x, y = ~density$y, type = 'scatter', mode = 'lines', fill = 'tozeroy') %>%
+  layout(xaxis = list(title = 'Carat'),
+         yaxis = list(title = 'Density'))
+p
+```
+
+### Gráfico de Barras
+
+```{r}
+library(dplyr)
+
+p <- ggplot2::diamonds %>% count(cut, clarity) %>%
+  plot_ly(x = ~cut, y = ~n, color = ~clarity)
+
+p
+```
+
+
+### Gráfico de Pastel
+
+```{r,echo=FALSE}
+USPersonalExpenditure <- data.frame("Categorie"=rownames(USPersonalExpenditure), USPersonalExpenditure)
+data <- USPersonalExpenditure[,c('Categorie', 'X1960')]
+
+p <- plot_ly(data, labels = ~Categorie, values = ~X1960, type = 'pie') %>%
+  layout(title = 'United States Personal Expenditures by Categories in 1960',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+p
+```
+
+### Gráfico de Caja
+
+```{r}
+p <- plot_ly(y = ~rnorm(50), type = "box") %>%
+  add_trace(y = ~rnorm(50, 1))
+p
+```
+
+
+### Gráfico de Ejes paralelos
+
+```{r echo=FALSE}
+p <- plot_ly(type = 'parcoords', line = list(color = 'blue'),
+             dimensions = list(
+               list(range = c(1,5),
+                    constraintrange = c(1,2),
+                    label = 'A', values = c(1,4)),
+               list(range = c(1,5),
+                    tickvals = c(1.5,3,4.5),
+                    label = 'B', values = c(3,1.5)),
+               list(range = c(1,5),
+                    tickvals = c(1,2,4,5),
+                    label = 'C', values = c(2,4),
+                    ticktext = c('text 1', 'text 2', 'text 3', 'text 4')),
+               list(range = c(1,5),
+                    label = 'D', values = c(4,2))
+             )
+  )
+p
+
+```
+
+### Gráficos 3D (Superficies)
+
+```{r}
+#Gráficos 3D (Superficies)  ------------------------------------
+
+p <- plot_ly(z = ~volcano) %>% add_surface()
+p
+
+```
+
+
+### Animaciones
+
+```{r}
+library(gapminder)
+
+p <- gapminder %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  ) %>%
+  layout(
+    xaxis = list(
+      type = "log"
+    )
+  )
+p
+
+```
+

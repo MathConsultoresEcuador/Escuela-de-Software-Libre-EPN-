@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+
+\section{Paper}
+
+<<directorio, echo=F>>=
+#opts_knit$set(root.dir = 'ChunksTmp')
+opts_chunk$set(eval = F,fig.align = "center")
+@
+
+
+Abstract del proyecto de investigación
+
+\subsection{Creación de Directorios}
+
+<<eval=F>>=
+#Crear Directorio
+dir.create("Directorio1")
+#Crear Archivo
+file.create("Archivo.R")
+#Crear Contenidos
+cat("Reproducible Research with R and RStudio",
+file = "ExampleCat.md")
+#Añadir más contenido
+cat("More Text", file = "ExampleCat.md",
+append = TRUE)
+#Eliminar archivos y directorios
+unlink("C:\\ExampleProject\\SourceCode.R")
+
+#Copiar Archivos
+file.copy(from = "C:\\ExampleProject\\ExampleCat.md",
+to = "C:\\MarkdownFiles\\ExampleCat.md")
+#Mover Archivos
+file.rename(from = "C:\\ExampleProject\\ExampleCat.md",
+to = "C:\\MarkdownFiles\\ExampleCat.md")
+@
+
+\section{Análisis}
+Ejecutamos subprocesos y Análisis
+
+<<proceso, cache=FALSE >>=
+source(file= 'Analisis/Datos/CargaDatos.R')
+
+source(file= 'Analisis/Datos/LimpiezaDatos.R')
+
+source(file= 'Analisis/Datos/Transformacion.R')
+
+@
+
+
+<<analisis, dependson= c(-1) >>=
+source(file= 'Analisis/Analisis.R')
+@
+
+Fijar decimales de numeros \Sexpr{round(mean(rivers), digits = 2)}
+
+
+
+
+\section{Informe de Sesion}
+
+<<info, results='asis',eval=TRUE,size='nomalsize'>>=
+toLatex(sessionInfo())
+@
+
+
+\end{document}

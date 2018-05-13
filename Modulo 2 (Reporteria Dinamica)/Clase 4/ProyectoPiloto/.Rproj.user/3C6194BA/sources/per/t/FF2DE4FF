@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523232979701.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "9817755",
+    "id" : "FF2DE4FF",
+    "lastKnownWriteTime" : 1523233046,
+    "last_content_update" : 1523233046099,
+    "path" : "~/Escritorio/Modulo 2/Clase 4/ProyectoPiloto/paper.Rnw",
+    "project_path" : "paper.Rnw",
+    "properties" : {
+        "cursorPosition" : "63,0",
+        "scrollLine" : "55",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sweave"
+}

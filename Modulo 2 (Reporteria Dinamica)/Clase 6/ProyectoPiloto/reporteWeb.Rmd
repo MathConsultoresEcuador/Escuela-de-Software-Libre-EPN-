@@ -1,0 +1,85 @@
+---
+title: "Ejemplo Clase 7"
+author: "David Pachacama"
+date: "8 de abril de 2018"
+output:
+  rmarkdown::html_document:
+    theme: paper
+---
+
+```{r setup, include=FALSE}
+# “default”, “cerulean”, “journal”, “flatly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, “yeti”
+
+library(knitr)
+library(DT)
+
+load("Analisis/Modelos.RData")
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
+```
+
+## Análisis de Regresión
+
+### Datos
+
+Mostramos una parte de la base de datos `cars` usando el paquete `knitr` y la función `kable`:
+
+```{r}
+#names(cars) = c("speed", "dist",  "Belen")
+kable(cars[1:10,])
+```
+
+Ahora usando el paquete `DT` y la función `datatable`:
+
+```{r}
+#datatable(cars)
+```
+
+
+
+Analizaremos la base de datos `cars` que se encuentra disponible en el ambiente base de R. A continuación mostramos estadístico descriptivos de la base de datos:
+
+```{r cars}
+summary(cars)
+library(Hmisc)
+#latex(summary(cars))
+```
+
+## Gráficos
+
+A contuación mostramos graficos cruzados de las variables de la base de datos.
+
+```{r graf1}
+plot(cars)
+```
+
+## Modelos
+
+### Gráfica de los modelos
+
+### Modelo 1
+
+Usando la función `plot()`. Gráfico de la recta de regresión.
+
+```{r}
+#modelo1= lm(data=cars,`Belén`~dist)
+plot(cars$dist,cars$Belén)
+abline(modelo1,lwd=3,col='red')
+```
+
+Usando el paquete `ggplot2`. Gráfico de la recta de regresión.
+
+```{r}
+library(ggplot2)
+p = ggplot(data=cars,aes(x=dist,y=`Belén`))+geom_point()+geom_smooth(method=lm)
+```
+
+Usando el paquete `plotly`. Gráfico de la recta de regresión.
+
+```{r}
+library(plotly)
+ggplotly(p)
+
+
+```
+
+

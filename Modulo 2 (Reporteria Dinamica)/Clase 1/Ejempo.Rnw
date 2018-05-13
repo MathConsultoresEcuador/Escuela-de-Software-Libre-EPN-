@@ -1,0 +1,86 @@
+% Preambulo
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\makeindex
+
+%Cuerpo
+\begin{document}
+
+
+
+\chapter{Introducción a LateX}
+
+\section{Ecuaciones}
+Belén $x^2 +y=z$
+
+\[
+f(x)=\sum_{i=1}^n x_i^2
+\]
+
+$$f(x)=\sum_{i=1}^n x_i^2$$
+
+Fermat fue junto con René Descartes y Johannes Kepler uno de los principales matemáticos de la primera mitad del siglo XVII.
+
+Joseph-Louis Lagrange afirmó claramente que él consideraba a Fermat como el inventor del cálculo.3.Fermat fue cofundador de la teoría de probabilidades junto a Blaise Pascal e independientemente de Descartes, descubrió el principio fundamental de la geometría analítica. Sin embargo, es más conocido por sus aportaciones a la teoría de números en especial por el conocido como último teorema de Fermat, que preocupó a los matemáticos durante aproximadamente 350 años, hasta que fue demostrado en 1995 por Andrew Wiles ayudado por Richard Taylor sobre la base del Teorema de Shimura-Taniyama.4.
+
+Fermat es uno de los pocos matemáticos honrados como epónimo de un asteroide, que lleva la especificación nominal de (12007) Fermat. También se le ha dado la denominación de Fermat a un cráter lunar de 39 km de diámetro.
+
+\chapter{Código R}
+
+\section{Chunks}
+Fermat fue junto con René Descartes y Johannes Kepler uno de los principales matemáticos de la primera mitad del siglo XVII.
+
+Joseph-Louis Lagrange afirmó claramente que él consideraba a Fermat como el inventor del cálculo.3 Fermat fue cofundador de la teoría de probabilidades junto a Blaise Pascal e independientemente de Descartes, descubrió el principio fundamental de la geometría analítica. Sin embargo, es más conocido por sus aportaciones a la teoría de números en especial por el conocido como último teorema de Fermat, que preocupó a los matemáticos durante aproximadamente 350 años, hasta que fue demostrado en 1995 por Andrew Wiles ayudado por Richard Taylor sobre la base del Teorema de Shimura-Taniyama.4
+
+Fermat es uno de los pocos matemáticos honrados como epónimo de un asteroide, que lleva la especificación nominal de (12007) Fermat. También se le ha dado la denominación de Fermat a un cráter lunar de 39 km de diámetro.
+
+Ejemplo 1
+<<echo=TRUE,eval=TRUE>>=
+require(pander)
+panderOptions('digits' , 2)
+x<-2+2
+y<-1:10
+y
+@
+
+Ejemplo 2
+<<echo=FALSE,eval=TRUE>>=
+x<-50
+y<-1:10
+y
+@
+
+Ejemplo 3
+<<echo=TRUE,eval=FALSE>>=
+x<-2+2
+y<-1:10
+y
+@
+
+Ejemplo 4
+<<echo=F,eval=F>>=
+x<-123123.5656
+y<-1:10
+@
+
+Ejercicio 
+
+<<>>=
+plot(cars)
+@
+
+
+<<>>=
+x<-50
+if(x<=10){
+  texto <- paste0('Disminuye en un',x,' porciento')
+}else{
+  texto <- paste0('Aumenta en un',x,' porciento')
+}
+@
+
+Joseph-Louis Lagrange afirmó claramente que él consideraba a Fermat como el inventor del cálculo.3 Fermat fue cofundador de la teoría de probabilidades junto a Blaise Pascal e independientemente de Descartes, descubrió el principio fundamental de la geometría analítica. Sin embargo, es más conocido por sus aportaciones a la teoría de números en especial \Sexpr{texto} por el conocido como último teorema de Fermat, que preocupó a los matemáticos durante aproximadamente 350 años, hasta que fue demostrado en 1995 por Andrew Wiles ayudado por Richard Taylor sobre la base del Teorema de Shimura-Taniyama.4
+
+
+\end{document}

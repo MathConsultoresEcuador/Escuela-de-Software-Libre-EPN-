@@ -1,0 +1,45 @@
+h1 {
+color: #00529c;
+font-weight: bold;
+text-align: left;
+}
+
+h2 {
+color: #ff0c00;
+font-weight: bold;
+text-align: left;
+}
+
+h3 {
+color: #bc8000;
+font-weight: bold;
+text-align: left;
+}
+
+h4 {
+color: #6700bc;
+font-weight: bold;
+}
+
+h5 {
+color: #00529c;
+font-weight: bold;
+text-align: left;
+}
+
+h6 {
+color: red;
+font-weight: bold;
+text-align: left;
+}
+
+.centrada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
